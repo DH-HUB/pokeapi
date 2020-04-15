@@ -1,0 +1,89 @@
+/*@charset "iso-8859-1";*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/pokemones_p.png");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0%;
+    font: 14px Georgia, bold, serif;
+}
+
+#content {
+    width: 800px;
+    margin: 30px auto;
+}
+
+/* =Navigation */
+
+#nav-reflection {
+    margin: 0 auto 50px auto;
+    padding: 50px 0 0 50px;
+    width: 100%;
+    min-height: 70px;
+    list-style: none;
+}
+
+#nav-reflection li {
+    margin-right: 15px;
+    width: 59px;
+    float: left;
+}
+
+#nav-reflection a, #nav-reflection a:visited, #nav-reflection a:hover {
+    width: 59px;
+    height: 59px;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: 0;
+    background: url(../images/icons.png) no-repeat;
+    display: block;
+}
+
+/* BTN couleurs */
+#nav-reflection li.button-color-1 a {
+    background-position: -3px -3px;
+}
+
+#nav-reflection li.button-color-2 a {
+    background-position: -92px -3px;
+}
+
+#nav-reflection li.button-color-3 a {
+    background-position: -181px -3px;
+}
+
+#nav-reflection li.button-color-4 a {
+    background-position: -270px -3px;
+}
+
+/* BTN réflection */
+#nav-reflection li.button-color-1 span {
+    background-position: 0 0;
+}
+
+#nav-reflection li.button-color-2 span {
+    background-position: -89px 0;
+}
+
+#nav-reflection li.button-color-3 span {
+    background-position: -178px 0;
+}
+
+#nav-reflection li.button-color-4 span {
+    background-position: -267px 0;
+}
+
+#result-container {
+    background-color: rgb(241, 230, 74);
+    width: 20%;
+    opacity:0.9;
+    margin-left:40%;
+}
+a.previous,a.next{
+    display: block;
+}
