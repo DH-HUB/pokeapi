@@ -1,4 +1,4 @@
-/*@charset "iso-8859-1";*/
+@charset "iso-8859-1";
 
 * {
     margin: 0;
@@ -10,7 +10,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin-top: 0%;
-    font: 14px Georgia, bold, serif;
+    font: 92% Georgia, bold, serif;
+    
 }
 
 #content {
@@ -24,7 +25,7 @@ body {
     margin: 0 auto 50px auto;
     padding: 50px 0 0 50px;
     width: 100%;
-    min-height: 70px;
+    min-height: 50px;
     list-style: none;
 }
 
@@ -79,10 +80,15 @@ body {
 }
 
 #result-container {
-    background-color: rgb(241, 230, 74);
-    width: 20%;
-    opacity:0.9;
-    margin-left:40%;
+    background-color: rgba(74, 135, 250, 0.555);
+    width: 60%;
+    height: 60%;
+    border: 1px solid #5a0247;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  display: flex;
+  justify-content: center;
 }
 a.previous,a.next{
     display: block;
