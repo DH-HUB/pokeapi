@@ -26,48 +26,56 @@ function loadUrl(url) {
 }
 
 $(document).ready(function () {
-    let previous
+
     $("#berries").hover(function () {
-        loadUrl("https://pokeapi.co/api/v2/berry/?offset=0&limit=16");
-        
+        loadUrl("https://pokeapi.co/api/v2/berry/?offset=0&limit=16");   
+        $(".titre").text("List Berries");
+      
     });
     $("#contests").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/contest-type/?offset=0&limit=16");
-        
+    //affichage du titre de la liste Berries ( idem pour le reste des listes ci-dessous) 
+        $(".titre").text("List Contests");      
     });
     $("#encounters").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/encounter-method/?offset=0&limit=16");
-        
+     
+        $(".titre").text("List Encounters");     
     });
     $("#evolution").hover(function () {
-        loadUrl("https://pokeapi.co/api/v2/evolution-trigger/?offset=0&limit=16")+  loadUrl("https://pokeapi.co/api/v2/pokemon-species/?offset=0&limit=16");
-        
+        loadUrl("https://pokeapi.co/api/v2/evolution-trigger/?offset=0&limit=16");
+        $(".titre").text("List Evolution");
+     
     });
     $("#games").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/generation/?offset=0&limit=8");
-        
+        $(".titre").text("List Games");
     });
     $("#items").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/item/?offset=0&limit=16");
+        $(".titre").text("List Items");
         
     });
     $("#locations").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/location/?offset=0&limit=4");
-        
+        $(".titre").text("List Locations");
     });
     $("#machines").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/version/?offset=0&limit=16");
-        
+        $(".titre").text("List Machines");
     });
     $("#moves").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/move/?offset=0&limit=16");
-        
-    });
-    $("#pokemon").hover(function () {
-        loadUrl("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=16");
+        $(".titre").text("List Moves");
         
     });
     
+    $("#pokemon").hover(function () {
+        loadUrl("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=16");
+        $(".titre").text("List Pokemon");
+       
+    });
+
     $(document).on('click', '.previous', function () {
         if (previousUrl !== null) {
             loadUrl(previousUrl);
@@ -79,5 +87,7 @@ $(document).ready(function () {
         }
     });
 });
+
+
 
 

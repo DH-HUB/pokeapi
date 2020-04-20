@@ -93,3 +93,7 @@ body {
 a.previous,a.next{
     display: block;
 }
+.titre{
+    text-align: center;
+    color: #000000; 
+}
