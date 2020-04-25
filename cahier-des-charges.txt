@@ -5,13 +5,15 @@
 
 
 R�aliser une page HTML qui fasse l'interface avec une API.
+
 Api impos�e : https://pokeapi.co/docs/v2.html/
-1) R�aliser une navbar statique qui r�f�rence les fonctionnalit�s de l'API et r�aliser une mise en forme esth�tique. 1
-2) interroger l'API pour r�cup�rer les diverses listes en int�grant le syst�me de pagination. 1
-3) g�rer un menu d�roulant sur la navbar pour g�rer les diverses listes (option).1
-4) traiter � minima la pr�sentation d�taill�e d'un Pok�mon si clic sur un nom de Pok�mon.0
-5) renvoyer vers un message d'erreur l'ensemble des liens non g�r�s de l'API.0
-6) traiter l'ensemble des fiches d�taill�es (option).0
+1) R�aliser une navbar statique qui r�f�rence les fonctionnalit�s de l'API et r�aliser une mise en forme esth�tique. 
+2) interroger l'API pour r�cup�rer les diverses listes en int�grant le syst�me de pagination. 
+3) g�rer un menu d�roulant sur la navbar pour g�rer les diverses listes (option).
+
+4) traiter � minima la pr�sentation d�taill�e d'un Pok�mon si clic sur un nom de Pok�mon.
+5) renvoyer vers un message d'erreur l'ensemble des liens non g�r�s de l'API.
+6) traiter l'ensemble des fiches d�taill�es (option).
 
 Pok�API
 An open RESTful API for Pok�mon data

@@ -1,4 +1,4 @@
-@charset "iso-8859-1";
+
 
 * {
     margin: 0;
@@ -23,7 +23,7 @@ body {
 
 #nav-reflection {
     margin: 0 auto 50px auto;
-    padding: 50px 0 0 50px;
+    padding: 10px 0 0 10px;
     width: 100%;
     min-height: 50px;
     list-style: none;
@@ -78,11 +78,11 @@ body {
 #nav-reflection li.button-color-4 span {
     background-position: -267px 0;
 }
-
+/*DIV de présentation des listes */
 #result-container {
     background-color: rgba(74, 135, 250, 0.555);
     width: 60%;
-    height: 60%;
+    height: 30%;
     border: 1px solid #5a0247;
     margin-left: auto;
     margin-right: auto;
@@ -90,10 +90,29 @@ body {
   display: flex;
   justify-content: center;
 }
+#pokemon-detail {
+    background-color: rgba(74, 135, 250, 0.555);
+    width:90%;
+    height: 60%;
+    border: 1px solid #5a0247;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
 a.previous,a.next{
     display: block;
 }
+/*Titre des listes*/
 .titre{
     text-align: center;
     color: #000000; 
+}
+.title{
+    text-align: center;
+   
 }
