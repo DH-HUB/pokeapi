@@ -27,22 +27,28 @@ function loadUrl(url) {
 }
 
 $(document).ready(function () {
-    $(document).on('click', '.pokemon', function (e) {
+    $(document).on('click', '.pokemon',  function (e) {
        
         e.preventDefault();
         let link = $(this);
         $.getJSON(link.data('src'), function (reponseJSON) {
             console.log(reponseJSON);
-            let html = '';
-            html +='<br>'+'<br>'+ '<h3>' + '<br>'+'nom du Pokémon =' +reponseJSON.name + '</h3>';
-            html += '<h3>' +'<br>'+'<br>'+'base_experience ='+ reponseJSON.base_experience +'</h3>';
-            html += '<h3>' +'<br>'+ '<br>'+'<br>'+'La taille du Pokémon ='+reponseJSON.height+ 'dm'+'<br>'+'<br>'+'<br>'+'<br>'+ '</h3>';
+            let html ='';
+            html += '<h3>'+'<li>'+'nom du Pokémon =' +reponseJSON.name + '</li>'+'</h3>';
+            html +='<h3>'+'<li>'+'base_experience ='+ reponseJSON.base_experience+'</li>'+'</h3>';
+            html += '<h3>'+'<li>'+'La taille du Pokémon ='+reponseJSON.height+''+ 'dm'+'</h3>'+'</li>';
+            html += '<ul>';
             //html +=  '<span>' + reponseJSON.sprites + '</span>';
             for (let i = 0; i < reponseJSON.base_experience.length; i++) {
                 html += '<li>'+reponseJSON.base_experience[i].base_experience +'</li>';
+                html += '<li>'+reponseJSON.base_experience[i].name +'</li>';
+                html += '<li>'+reponseJSON.base_experience[i].height +'</li>';
             }
             html += '</ul>';
-            $('#pokemon-detail').html(html);
+            $('#results').html(html);
+            $(".titre").text("Description du Pokémon");
+        
+
         });
 
     })
@@ -54,43 +60,43 @@ $(document).ready(function () {
     $("#contests").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/contest-type/?offset=0&limit=16");
         //affichage du titre de la liste Berries ( idem pour le reste des listes ci-dessous)
-        $(".titre").text("List Contests");
+        $(".titre").text("Liste Contests");
     });
     $("#encounters").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/encounter-method/?offset=0&limit=16");
 
-        $(".titre").text("List Encounters");
+        $(".titre").text("Liste Encounters");
     });
     $("#evolution").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/evolution-trigger/?offset=0&limit=16");
-        $(".titre").text("List Evolution");
+        $(".titre").text("Liste Evolution");
 
     });
     $("#games").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/generation/?offset=0&limit=8");
-        $(".titre").text("List Games");
+        $(".titre").text("Liste Games");
     });
     $("#items").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/item/?offset=0&limit=16");
-        $(".titre").text("List Items");
+        $(".titre").text("Liste Items");
 
     });
     $("#locations").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/location/?offset=0&limit=4");
-        $(".titre").text("List Locations");
+        $(".titre").text("Liste Locations");
     });
     $("#machines").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/version/?offset=0&limit=16");
-        $(".titre").text("List Machines");
+        $(".titre").text("Liste Machines");
     });
     $("#moves").hover(function () {
         loadUrl("https://pokeapi.co/api/v2/move/?offset=0&limit=16");
-        $(".titre").text("List Moves");
+        $(".titre").text("Liste Moves");
 
     });
 
     $("#pokemon").hover(function () {
-        $(".titre").text("List Pokemon");
+        $(".titre").text("Liste Pokémon");
         loadUrl("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=16");
 
     });
@@ -104,6 +110,11 @@ $(document).ready(function () {
         if (nextUrl !== null) {
             loadUrl(nextUrl);
         }
+    });
+
+    $("#click").click(function() {
+        player = document.getElementById('sound');
+        player.play();
     });
 
 });
