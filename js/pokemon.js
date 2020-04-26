@@ -1,6 +1,6 @@
 let previousUrl = null;
 let nextUrl = null;
-
+let imgUrl = null;
 
 function renderReponse(reponseJSON) {
     let resultsHTML = '';
@@ -38,15 +38,19 @@ $(document).ready(function () {
             html +='<h3>'+'<li>'+'base_experience ='+ reponseJSON.base_experience+'</li>'+'</h3>';
             html += '<h3>'+'<li>'+'La taille du Pokémon ='+reponseJSON.height+''+ 'dm'+'</h3>'+'</li>';
             html += '<ul>';
-            //html +=  '<span>' + reponseJSON.sprites + '</span>';
+         
+
+            
             for (let i = 0; i < reponseJSON.base_experience.length; i++) {
                 html += '<li>'+reponseJSON.base_experience[i].base_experience +'</li>';
                 html += '<li>'+reponseJSON.base_experience[i].name +'</li>';
                 html += '<li>'+reponseJSON.base_experience[i].height +'</li>';
+  
             }
             html += '</ul>';
             $('#results').html(html);
             $(".titre").text("Description du Pokémon");
+  
         
 
         });
@@ -95,7 +99,7 @@ $(document).ready(function () {
 
     });
 
-    $("#pokemon").hover(function () {
+    $("#pokemon").hover(function (pika) {
         $(".titre").text("Liste Pokémon");
         loadUrl("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=16");
 
@@ -112,7 +116,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#click").click(function() {
+    $("#click").hover(function() {
         player = document.getElementById('sound');
         player.play();
     });
